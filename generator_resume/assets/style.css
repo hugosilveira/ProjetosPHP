@@ -1,0 +1,178 @@
+/* assets/style.css — Tema Clean/Soft com Impressão A4 — v4 */
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --ink:#1c2333;
+  --muted:#6b7489;
+  --brand:#111827;
+  --accent:#0d6efd;
+  --soft:#e9f2ff;
+  --ring: 0 10px 30px rgba(17,24,39,.08);
+  --shadow-soft: 0 6px 18px rgba(17,24,39,.06);
+}
+* { box-sizing: border-box; }
+html, body { height:100%; }
+body { background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+.hero{ background: radial-gradient(1200px 400px at 10% -10%, var(--soft), transparent), var(--brand); color:#fff; padding:28px 0; }
+.hero .hero-inner{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.text-hero{ opacity:.9; }
+
+.shadow-soft{ box-shadow: var(--shadow-soft); }
+.card{ border-radius:16px; }
+.section-label{ font-weight:700; letter-spacing:.3px; display:flex; align-items:center; gap:.5rem; }
+.divider{ border:0; height:1px; background:linear-gradient(90deg, rgba(0,0,0,.06), rgba(0,0,0,.02), transparent); }
+
+.footer{ opacity:.8; }
+
+.resume-sheet{ background:#fff; border-radius:16px; box-shadow: var(--ring); overflow:hidden; zoom: 0.96; }
+.resume-pro .sidebar{ background:linear-gradient(180deg, #0b1222, #151d33); color:#e6e9f3; min-height:100%; }
+.resume-pro .sidebar h1{ color:#fff; }
+.resume-pro .contact-list li{ display:flex; align-items:center; gap:.5rem; margin-bottom:.35rem; color: rgba(255,255,255,.85); }
+.resume-pro .contact-list i{ color:#a8b8ff; }
+.avatar{ display:flex; }
+.avatar-circle{ width:72px; height:72px; border-radius:999px; background:#0d6efd; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.5rem; box-shadow: inset 0 0 0 4px rgba(255,255,255,.2); }
+.section-title{ font-size:1.05rem; font-weight:800; text-transform:uppercase; letter-spacing:.6px; color:#5c6b8a; border-left:4px solid var(--accent); padding-left:.5rem; }
+
+/* Sidebar contrast improvements */
+.resume-pro .sidebar .text-muted { color: rgba(255,255,255,.8) !important; }
+.resume-pro .sidebar h2.h6 { text-transform: uppercase; letter-spacing: .5px; font-weight: 700; margin-top: 1rem; color: rgba(255,255,255,.85) !important; }
+.skills-list{ display:flex; flex-wrap:wrap; gap:.4rem; list-style:none; padding:0; margin:0; }
+.skills-list li{ background: rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.1); padding:.25rem .55rem; border-radius:999px; font-size:.85rem; }
+.edu-item{ margin-bottom:.6rem; }
+.edu-item .fw-semibold{ color:#fff; }
+.edu-item .text-muted{ color: rgba(255,255,255,.75) !important; }
+
+/* Timeline spacing fix */
+.timeline{ position:relative; padding-left:40px; }
+.timeline::before{ content:""; position:absolute; left:12px; top:0; bottom:0; width:2px; background:#e9edf6; }
+.tl-item{ position:relative; margin-bottom:24px; }
+.tl-dot{ position:absolute; left:4px; top:.55rem; width:14px; height:14px; background:var(--accent); border-radius:999px; box-shadow:0 0 0 6px #e9f2ff; }
+.tl-content{ padding-left:22px; }
+
+/* Impressão A4 aprimorada */
+@media print {
+  body { background:#fff !important; color:#000000 !important; font-size:11pt; }
+  @page {   margin: 16mm 14mm 14mm 18mm; }
+
+  .no-print, .hero, .footer { display:none !important; }
+
+  .resume-sheet { box-shadow:none !important; border-radius:0 !important; padding:0; }
+
+  /* Sidebar preta com texto claro */
+  .resume-pro .sidebar {
+    background:#0a265a !important;
+    color:#fff !important;
+    border-right:2px solid #ddd;
+    padding:16px 20px !important;
+    width:100%;
+  }
+  .resume-pro .sidebar h1,
+  .resume-pro .sidebar h2,
+  .resume-pro .sidebar .edu-item .fw-semibold {
+    color:#fff !important;
+  }
+  .resume-pro .sidebar .text-muted {
+    color:rgba(255,255,255,.8) !important;
+  }
+  .skills-list li {
+    background:rgba(255,255,255,.15) !important;
+    color:#fff !important;
+    border:1px solid rgba(255,255,255,.1);
+  }
+
+  /* Seções principais */
+  .resume-pro section { padding: 0 20px 0 24px; }
+  .section-title {
+    margin-top:10pt;
+    margin-bottom:4pt;
+    border-left:3px solid #0d6efd;
+    padding-left:8pt;
+    color:#0d6efd !important;
+    font-weight:800;
+  }
+
+  /* Timeline */
+  .tl-item { margin-bottom:18pt; page-break-inside: avoid; }
+  .tl-dot {
+    top:.4rem;
+    left:9px;
+    width:12px; height:12px;
+    background:#0d6efd !important;
+    border:2px solid #fff;
+    border-radius:50%;
+    box-shadow:0 0 0 5px #e9f2ff;
+  }
+  .tl-content { padding-left:24pt; }
+
+  /* Listas e textos */
+  ul { margin-top:2pt; margin-bottom:8pt; }
+  h1, h2, h3, .section-title, .item, .edu-item { break-inside: avoid; }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}
+
+
+
+/* === v5 tweaks: timeline dot alignment & spacing === */
+.timeline{ position:relative; padding-left:40px; } /* a little more space */
+.timeline::before{ left:14px; } /* center the vertical line relative to dot */
+.tl-item{ position:relative; margin-bottom:26px; min-height:38px; } /* ensure enough height */
+.tl-dot{
+  left:7px;                /* aligns dot with vertical line */
+  top: .6rem;              /* better vertical alignment with heading line */
+  width:12px; height:12px; /* slightly smaller for print crispness */
+  background: var(--accent);
+  border-radius:50%;
+  border: 2px solid #fff;  /* keeps dot visible on colored/gray backgrounds */
+  box-shadow: 0 0 0 6px #e9f2ff;
+}
+.tl-content{ padding-left:24px; margin-top: 2px; }
+
+/* === v5 print color & spacing fixes === */
+@media print {
+  /* force browsers (especially WebKit/Chromium) to keep colors */
+  body, .resume-sheet, .resume-pro .sidebar, .section-title, .tl-dot, .skills-list li {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* stronger accent on print */
+  :root{ --accent:#0a58ca; }
+
+  /* ensure vertical spacing between sections and list items */
+  .section-title{ margin-top: 12pt; margin-bottom: 6pt; }
+  .tl-item{ margin-bottom: 20pt; }
+  .skills-list{ margin-top: 4pt; margin-bottom: 10pt; gap: 6pt; }
+  .skills-list li{ padding: 3pt 7pt; }
+
+  /* fine-tune the left gutter */
+  .timeline{
+    padding-left: 40px;   /* espaço até o texto */
+  }
+  .timeline::before{
+    left: 18px;           /* centraliza a linha vertical em relação à bolinha */
+  }
+  .tl-dot{
+    left: 11px;           /* encosta a bolinha na linha vertical */
+    top: .58rem;          /* alinha com a primeira linha do item */
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #0d6efd !important;
+    border: 2px solid #fff;    /* contorno pra legibilidade no PDF */
+    box-shadow: 0 0 0 5px #e9f2ff;
+  }
+  .tl-content{
+    padding-left: 26px;   /* distância entre bolinha e bloco de texto */
+    margin-top: 1px;      /* microajuste vertical do texto */
+  }
+
+  /* slightly darker text for readability */
+  .text-secondary, .text-muted { color: #333 !important; }
+}
