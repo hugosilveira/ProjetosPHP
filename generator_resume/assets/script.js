@@ -109,7 +109,7 @@ $(function(){
     $('#email').val('lucas.mendes.datasci@example.com');
     $('#telefone').val('+55 (11) 9 9123-4567');
     $('#endereco').val('Av. Paulista, 2000 - São Paulo, SP, Brasil');
-    $('#nascimento').val('1986-08-14').trigger('change');
+    $('#nascimento').val('1985-05-30').trigger('change');
     $('#resumo').val('Cientista de Dados sênior com 10+ anos de experiência em projetos de analytics, modelos preditivos e engenharia de dados. Atuação em bancos e grandes corporações de telecom e crédito, liderando times e entregando soluções de Machine Learning em produção.');
     $('#skills').val('Python, SQL, PySpark, scikit-learn, TensorFlow, Airflow, Docker, Kubernetes, BigQuery, Power BI, DAX, NLP, Modelo Preditivo');
 
