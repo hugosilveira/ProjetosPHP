@@ -1,5 +1,5 @@
 <?php
-// index.php — Formulário (Tema Clean) — v4
+// index.php 
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -18,12 +18,12 @@
 <header class="hero">
   <div class="container hero-inner">
     <div>
-      <h1 class="display-6 fw-bold mb-1">APO • Gerador de Currículo</h1>
-      <p class="mb-0 text-hero">Crie um currículo limpo e moderno, pronto para imprimir em PDF.</p>
+      <h1 class="display-6 fw-bold mb-1">Gerador de Currículo</h1>
+      <p class="mb-0 text-hero">Gerador de curriculos profissionais, pronto para impressão</p>
     </div>
     <div class="d-flex gap-2">
-      <a class="btn btn-light btn-outline-dark" target="_blank" href="README.html"><i class="bi bi-book"></i> Ajuda</a>
-      <button type="button" id="fillExample" class="btn btn-dark"><i class="bi bi-magic"></i> Carregar Exemplo</button>
+      <!-- <a class="btn btn-light btn-outline-dark" target="_blank" href="README.html"><i class="bi bi-book"></i> Ajuda</a>-->
+      <button type="button" id="fillExample" class="btn btn-dark"><i class="bi bi-magic"></i> Exemplo</button>
     </div>
   </div>
 </header>
@@ -119,7 +119,7 @@
 </main>
 
 <footer class="footer py-4 text-center text-muted">
-  <small>APO • Fundamentos de Programação para Internet</small>
+  <small>Gerador de curriculos - powered HL Data</small>
 </footer>
 
 <script src="assets/script.js"></script>
