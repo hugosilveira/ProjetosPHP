@@ -1,4 +1,4 @@
-/* assets/style.css — Tema Clean/Soft com Impressão A4 — v4 */
+/* assets/style.css  */
 :root{
   --bg:#f6f8fb;
   --card:#ffffff;
@@ -50,7 +50,7 @@ body { background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui
 .tl-dot{ position:absolute; left:4px; top:.55rem; width:14px; height:14px; background:var(--accent); border-radius:999px; box-shadow:0 0 0 6px #e9f2ff; }
 .tl-content{ padding-left:22px; }
 
-/* Impressão A4 aprimorada */
+/* Impressão A4 */
 @media print {
   body { background:#fff !important; color:#000000 !important; font-size:11pt; }
   @page {   margin: 16mm 14mm 14mm 18mm; }
@@ -117,41 +117,36 @@ body { background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui
 }
 
 
-
-/* === v5 tweaks: timeline dot alignment & spacing === */
-.timeline{ position:relative; padding-left:40px; } /* a little more space */
-.timeline::before{ left:14px; } /* center the vertical line relative to dot */
-.tl-item{ position:relative; margin-bottom:26px; min-height:38px; } /* ensure enough height */
+.timeline{ position:relative; padding-left:40px; } 
+.timeline::before{ left:14px; } 
+.tl-item{ position:relative; margin-bottom:26px; min-height:38px; } 
 .tl-dot{
-  left:7px;                /* aligns dot with vertical line */
-  top: .6rem;              /* better vertical alignment with heading line */
-  width:12px; height:12px; /* slightly smaller for print crispness */
+  left:7px;                
+  top: .6rem;             
+  width:12px; height:12px; 
   background: var(--accent);
   border-radius:50%;
-  border: 2px solid #fff;  /* keeps dot visible on colored/gray backgrounds */
+  border: 2px solid #fff;  
   box-shadow: 0 0 0 6px #e9f2ff;
 }
 .tl-content{ padding-left:24px; margin-top: 2px; }
 
-/* === v5 print color & spacing fixes === */
 @media print {
-  /* force browsers (especially WebKit/Chromium) to keep colors */
   body, .resume-sheet, .resume-pro .sidebar, .section-title, .tl-dot, .skills-list li {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     color-adjust: exact !important;
   }
 
-  /* stronger accent on print */
+
   :root{ --accent:#0a58ca; }
 
-  /* ensure vertical spacing between sections and list items */
   .section-title{ margin-top: 12pt; margin-bottom: 6pt; }
   .tl-item{ margin-bottom: 20pt; }
   .skills-list{ margin-top: 4pt; margin-bottom: 10pt; gap: 6pt; }
   .skills-list li{ padding: 3pt 7pt; }
 
-  /* fine-tune the left gutter */
+
   .timeline{
     padding-left: 40px;   /* espaço até o texto */
   }

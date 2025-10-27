@@ -1,5 +1,5 @@
 <?php
-// resume.php — Layout clean com duas colunas e timeline — v4
+// resume.php
 function h($v){ return htmlspecialchars($v ?? '', ENT_QUOTES, 'UTF-8'); }
 $nome = h($_POST['nome'] ?? '');
 $nasc = $_POST['nascimento'] ?? '';
