@@ -33,7 +33,7 @@ $refe = $_POST['ref'] ?? [];
 </head>
 <body class="theme-soft">
 <div class="no-print container my-3 d-flex justify-content-between align-items-center">
-  <a href="index.php" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i> Editar</a>
+  <button type="button" class="btn btn-outline-secondary" onclick="window.history.back()"><i class="bi bi-arrow-left"></i> Editar</button>
   <button class="btn btn-primary" onclick="window.print()"><i class="bi bi-printer"></i> Imprimir / Salvar PDF</button>
 </div>
 
